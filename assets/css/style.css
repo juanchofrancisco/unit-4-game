@@ -1,13 +1,64 @@
-.crystals {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+body {
+    
+    background-image: url("../images/crystal-bg-2.jpg"); 
+    background-repeat: no-repeat;
 
 }
 
+.container {
 
-.crystal {
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
+    padding-top: 1%;
+
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px black;
+
+
+}
+
+h2 {
+    font-family: 'BioRhyme', serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding-left: 10px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    color: white;
+
+}
+
+.instructions {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    border: 1px solid #ececec;
+ 
+}
+
+ul {
+
+    padding: 0%;
+}
+
+img {
+
+    padding: 40px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    
 }
