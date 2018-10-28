@@ -17,6 +17,7 @@ $( document ).ready(function() {
 
     // user total score
     var userTotalScore= 0; 
+
     // wins and losses
     var wins= 0;
     var losses = 0;
@@ -24,9 +25,6 @@ $( document ).ready(function() {
     // wins losses with .text function so it gets written to their #IDs to the html file
     $('#numberWins').text(wins);
     $('#numberLosses').text(losses);
-
-    // labels of jewels to make the game easier for the user
-    $('#jewelBlue').text(jewelBlue);
     
     //function to reset the game, goes through all the steps, creating random 
 
@@ -56,24 +54,29 @@ $( document ).ready(function() {
     $('#numberLosses').text(losses);
     reset()
   }
-  //sets up click for jewels
+  //sets up click for jewels, starting with blue Jewel
     $('#one').on ('click', function(){
       userTotalScore = userTotalScore + jewelBlue;
       console.log("New userTotalScore= " + userTotalScore);
       $('#finalTotal').text(userTotalScore); 
             //sets win/lose conditions for the 4 crystals
-          if (userTotalScore == Random){
+            // if user total score is equal to the random number, then you win
+            // if user total score is greater than randon numner, then you loose
+
+          if (userTotalScore === Random){
             youWin();
           }
           else if ( userTotalScore > Random){
          youLoose();
           }   
+
+     // same on clicl/win/loose logic for the rest of the jewels
     })  
     $('#two').on ('click', function(){
       userTotalScore = userTotalScore + jewelGreen;
       console.log("New userTotalScore= " + userTotalScore);
       $('#finalTotal').text(userTotalScore); 
-          if (userTotalScore == Random){
+          if (userTotalScore === Random){
             youWin();
           }
           else if ( userTotalScore > Random){
@@ -84,8 +87,8 @@ $( document ).ready(function() {
       userTotalScore = userTotalScore + jewelRed;
       console.log("New userTotalScore= " + userTotalScore);
       $('#finalTotal').text(userTotalScore);
-  //sets win/lose conditions
-            if (userTotalScore == Random){
+ 
+            if (userTotalScore === Random){
             youWin();
           }
           else if ( userTotalScore > Random){
@@ -97,7 +100,7 @@ $( document ).ready(function() {
       console.log("New userTotalScore= " + userTotalScore);
       $('#finalTotal').text(userTotalScore); 
         
-            if (userTotalScore == Random){
+            if (userTotalScore === Random){
             youWin();
           }
           else if ( userTotalScore > Random){
